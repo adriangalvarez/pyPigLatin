@@ -1,4 +1,22 @@
 def wordToPig( word, ending_if_initial_vocal ):
+  """
+  Parameters:
+     word: word to be converted.
+     ending_if_initial_vocal: sound to add at the end of words starting with a vowel.
+  Return:
+    word converted to piglatin.
+    If word starts with a vowel, then it adds the parameter
+    'ending_if_initial_vocal', so you can call the function
+    not only with 'ay', but also with 'yay', 'way', 'hay'
+    or whatever sound you wish. However, if word starts
+    with a consonant, only 'ay' will be added.
+
+    Example:
+    wordToPig('ant', 'way') => antway
+    wordToPig('father', 'way') => atherfay
+    wordToPig('father', 'hay') => atherfay
+    wordToPig('tree', 'ay') => eetray
+  """
   if word[ 0 ] in [ 'a', 'e', 'i', 'o', 'u', 'h' ]:
     return word + ending_if_initial_vocal
   else:
